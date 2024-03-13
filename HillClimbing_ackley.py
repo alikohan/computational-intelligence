@@ -22,7 +22,7 @@ def hill_climbing(start_point, step_size, max_iterations):
 
 # Initial starting point
 start_point = (random.uniform(-5, 5), random.uniform(-5, 5))
-# start_point = (0, 2)
+# start_point = (0, 2) # fixed starting point
 step_size = 0.1
 max_iterations = 1000
 
