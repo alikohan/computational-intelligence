@@ -35,12 +35,13 @@ def mse(pixels1, width1, height1, pixels2, width2, height2): # Mean Squared Erro
     return sum / (width1 * height1)
 
 
+# ------------ colorspaces and formats ------------
+# image = Image.open('original.jpg') # Can be many different formats.
+# pixels = image.load()
+# convert(pixels, image.width, image.height, "blackandwhite")
+# image.save('blackandwhite.png') # Save the modified pixels as .png or .jpg or ...
 
-image = Image.open('original.jpg') # Can be many different formats.
-pixels = image.load()
-convert(pixels, image.width, image.height, "blackandwhite")
-image.save('blackandwhite.png') # Save the modified pixels as .png or .jpg or ...
-
+# ------------ MSE ------------
 image1 = Image.open('original.jpg')
 image2 = Image.open('original-compressed.jpg')
 pixels1 = image1.load()
