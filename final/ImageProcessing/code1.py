@@ -21,7 +21,6 @@ def convert(pixels, width, height, type):
                 else:
                     pixels[i, j] = (0, 0, 0) # Set the RGB channels value of the image (tuple)
 
-
 def mse(pixels1, width1, height1, pixels2, width2, height2): # Mean Squared Error
     sum = 0 # sum of distance between pixels
     if not (width1 == width2 and height1 == height2):
@@ -35,13 +34,13 @@ def mse(pixels1, width1, height1, pixels2, width2, height2): # Mean Squared Erro
     return sum / (width1 * height1)
 
 
-# ------------ colorspaces and formats ------------
-# image = Image.open('original.jpg') # Can be many different formats.
-# pixels = image.load()
-# convert(pixels, image.width, image.height, "blackandwhite")
-# image.save('blackandwhite.png') # Save the modified pixels as .png or .jpg or ...
 
-# ------------ MSE ------------
+image = Image.open('original.jpg') # Can be many different formats.
+pixels = image.load()
+convert(pixels, image.width, image.height, "blackandwhite")
+image.save('blackandwhite.png') # Save the modified pixels as .png or .jpg or ...
+# image.convert("1").save("new.png") # P for 8bit pixels (for RGB)
+
 image1 = Image.open('original.jpg')
 image2 = Image.open('original-compressed.jpg')
 pixels1 = image1.load()
